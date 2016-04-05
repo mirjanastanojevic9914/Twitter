@@ -54,17 +54,18 @@ public class TwitterPorukaTest {
 		tPoruka.setPoruka(por);
 		assertEquals(por, tPoruka.getPoruka());
 	}
-	@Test (expected = java.lang.RuntimeException.class)
-	 	public void testSetPorukaNull() {
-	 		tPoruka.setPoruka(null);
-	 	}
-	 	
-	 	@Test (expected = java.lang.RuntimeException.class)
-	 	public void testSetPorukaStringKojiJeDuziOd140Karaktera() {
-	 		String s = "PozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvv";
-	 		
-	 		tPoruka.setPoruka(s);
-	 	}
+
+	@Test(expected = java.lang.RuntimeException.class)
+	public void testSetPorukaNull() {
+		tPoruka.setPoruka(null);
+	}
+
+	@Test(expected = java.lang.RuntimeException.class)
+	public void testSetPorukaStringKojiJeDuziOd140Karaktera() {
+		String s = "PozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvvvPozdravvvvvvvvvvvvvvPozdravvvvvvvvvvvvvv";
+
+		tPoruka.setPoruka(s);
+	}
 
 	@Test
 	public void testToString() {
